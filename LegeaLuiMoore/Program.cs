@@ -12,7 +12,15 @@ namespace LegeaLuiMoore
         {
             int n;
             Console.Write("Amplificarea puterii: ");
-            n = int.Parse(Console.ReadLine());
+            try
+            {
+                n = int.Parse(Console.ReadLine());
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine("Numarul trebuie sa fie intreg", e.Message);
+                return;
+            }
 
             double rezultatLuni;
             rezultatLuni = (Math.Log(n, 2) * 18);
