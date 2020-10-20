@@ -161,8 +161,8 @@ namespace BaseConversion
                     initialNumber = Console.ReadLine();
                     for (int i = 0; i < initialNumber.Length; i++)
                     {
-                        if ((initialNumber[i] < '.' && initialNumber[i] < '0' && initialNumber[i] != 'A' && initialNumber[i] != 'B' && initialNumber[i] != 'C' && initialNumber[i] != 'D' && initialNumber[i] != 'E' && initialNumber[i] != 'F')
-                            || (initialNumber[i] < '.' && initialNumber[i] > '0' && initialNumber[i] != 'A' && initialNumber[i] != 'B' && initialNumber[i] != 'C' && initialNumber[i] != 'D' && initialNumber[i] != 'E' && initialNumber[i] != 'F'))
+                        if ((initialNumber[i] != '.' && initialNumber[i] < '0' && initialNumber[i] != 'A' && initialNumber[i] != 'B' && initialNumber[i] != 'C' && initialNumber[i] != 'D' && initialNumber[i] != 'E' && initialNumber[i] != 'F')
+                            || (initialNumber[i] != '.' && initialNumber[i] > '0' && initialNumber[i] != 'A' && initialNumber[i] != 'B' && initialNumber[i] != 'C' && initialNumber[i] != 'D' && initialNumber[i] != 'E' && initialNumber[i] != 'F'))
                         {
                             isValid = false;
                             Console.WriteLine("Invalid Number!");
