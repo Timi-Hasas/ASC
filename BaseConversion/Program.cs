@@ -155,28 +155,12 @@ namespace BaseConversion
 
             try
             {
-                do
-                {
                     Console.Write("Scrieti numarul pe care doriti sa-l convertiti: ");
                     initialNumber = Console.ReadLine();
-                    for (int i = 0; i < initialNumber.Length; i++)
-                    {
-                        if ((initialNumber[i] != '.' && initialNumber[i] < '0' && initialNumber[i] != 'A' && initialNumber[i] != 'B' && initialNumber[i] != 'C' && initialNumber[i] != 'D' && initialNumber[i] != 'E' && initialNumber[i] != 'F')
-                            || (initialNumber[i] != '.' && initialNumber[i] > '0' && initialNumber[i] != 'A' && initialNumber[i] != 'B' && initialNumber[i] != 'C' && initialNumber[i] != 'D' && initialNumber[i] != 'E' && initialNumber[i] != 'F'))
-                        {
-                            isValid = false;
-                            Console.WriteLine("Invalid Number!");
-                        }
-                        else
-
-                            isValid = true;
-                    }
-                } while (!isValid);
-
-                isValid = false;
-
+                
                 do
                 {
+                    isValid = false;
                     Console.Write("Scrieti baza numarului pe care doriti sa-l convertiti: ");
                     initialBase = int.Parse(Console.ReadLine());
                     if (initialBase >= 2 && initialBase <= 16)
