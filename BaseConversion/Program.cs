@@ -148,8 +148,7 @@ namespace BaseConversion
             Console.WriteLine("****************************");
             Console.WriteLine();
 
-            bool isValid = false;
-            bool isInvalid = false; ;
+            bool isValid = true;
             string initialNumber;
             int initialBase;
             int convertedBase;
@@ -160,11 +159,11 @@ namespace BaseConversion
                 {
                     Console.Write("Scrieti numarul pe care doriti sa-l convertiti: ");
                     initialNumber = Console.ReadLine();
-
+                    isValid = true;
                     for (int i = 0; i < initialNumber.Length; i++)
                     {
                         
-                        if ((initialNumber[i] >= '0' && initialNumber[i] <= '9') || initialNumber[i] == 'A' || initialNumber[i] == 'B' || initialNumber[i] == 'C' || initialNumber[i] == 'D' || initialNumber[i] == 'E' || initialNumber[i] == 'F')
+                        if (((initialNumber[i] >= '0' && initialNumber[i] <= '9') || initialNumber[i] == 'A' || initialNumber[i] == 'B' || initialNumber[i] == 'C' || initialNumber[i] == 'D' || initialNumber[i] == 'E' || initialNumber[i] == 'F' || initialNumber[i] == '.') && isValid)
                         {            
                             isValid = true;
                         }
@@ -177,7 +176,7 @@ namespace BaseConversion
                     if(!isValid)
                         Console.WriteLine("Invalid Number!");
 
-                    } while (!isValid);
+                } while (!isValid);
                 
                 do
                 {
