@@ -15,7 +15,6 @@ namespace BaseConversion
             Stack<int> stiva = new Stack<int>();
             int numarCifre = 0;
             bool isInt = true;
-            bool isInvalid = false;
 
             Console.WriteLine(numar);
 
