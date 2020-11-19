@@ -16,7 +16,7 @@ namespace CoffeeMachine
                 machine.SetState('B');
             }
             else
-                if (coin == 'd' || coin == 'd')
+                if (coin == 'D' || coin == 'd')
             {
                 machine.SetState('C');
             }
@@ -37,7 +37,7 @@ namespace CoffeeMachine
                 machine.SetState('C');
             }
             else
-                if (coin == 'd' || coin == 'd')
+                if (coin == 'D' || coin == 'd')
             {
                 machine.SetState('D');
             }
@@ -58,7 +58,7 @@ namespace CoffeeMachine
                 machine.SetState('D');
             }
             else
-                if (coin == 'd' || coin == 'd')
+                if (coin == 'D' || coin == 'd')
             {
                 machine.SetState('A');
                 machine.Dispense();
@@ -83,7 +83,7 @@ namespace CoffeeMachine
                 machine.Dispense();
             }
             else
-                if (coin == 'd' || coin == 'd')
+                if (coin == 'D' || coin == 'd')
             {
                 machine.SetState('A');
                 Console.Write("Your change: ");
