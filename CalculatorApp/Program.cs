@@ -271,6 +271,59 @@ namespace CalculatorApp
 
             return true;
         }
+
+
+
+        //Inmultirea cu scalar ( laborator FP)
+        /*
+        static int[] Scalar(int[] number1, int scalar)
+        {
+            int[] result;
+            int[] temp = new int[number1.Length];
+            int transport = 0;
+            int produs;
+            for(int i = 0; i < temp.Length; i++)
+            {
+                produs = number1[i] * scalar + transport;
+                temp[i] = produs % 10;
+                if (produs > 9)
+                    transport = produs / 10;
+                else
+                    transport = 0;
+            }
+            if(transport != 0)
+            {
+                result = new int[temp.Length + 1];
+                int i;
+                for (i = 0; i < temp.Length; i++)
+                    result[i] = temp[i];
+                result[i] = transport;
+            }
+            else
+                result = temp;
+            
+
+            return result;
+        }
+        static int[] Zero(int[]v, int nrZero)
+        {
+            int[] rez = new int[v.Length + nrZero];
+            for (int i = rez.Length - 1; i >= nrZero; i--)
+                rez[i] = v[i - nrZero];
+
+            return rez;
+        }
+        static void InmultireScalar(int[]number1, int[]number2, ref int[] result)
+        {
+            for(int i = 0; i < number2.Length; i++)
+            {
+                Suma(result, Zero(Scalar(number1, number2[i]), number2.Length - 1 - i), ref result);
+            }
+        }
+         */
+
+
+
         static void Main(string[] args)
         {
             string firstNumber, secondNumber;
@@ -290,7 +343,6 @@ namespace CalculatorApp
             CifreVector(secondNumber, ref number2);
             int[] result = { };
 
-
             Console.Write("Rezultatul este: ");
             switch (op)
             {
@@ -308,7 +360,7 @@ namespace CalculatorApp
                     }
                     break;
                 case '*':
-                    Produs(number1, number2, ref result);
+                    Produs(number1, number2, ref result);                
                     break;
                 case '/':
                     Impartire(number1, number2, ref result);

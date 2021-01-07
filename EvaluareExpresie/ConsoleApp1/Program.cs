@@ -87,7 +87,7 @@ namespace ConsoleApp1
         {
             string spaces = "";
             for (int i = 0; i < exp.Length - 1; i++)
-                if (exp[i] >= '0' && exp[i] <= '9' && exp[i + 1] >= '0' && exp[i] <= '9')
+                if (exp[i] >= '0' && exp[i] <= '9' && exp[i + 1] >= '0' && exp[i + 1] <= '9')
                     spaces += exp[i];
                 else
                     spaces += exp[i] + " ";
